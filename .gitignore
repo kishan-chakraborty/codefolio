@@ -31,4 +31,3 @@ coverage/
 
 # macOS-specific files
 .DS_Store
-.yarn/install-state.gz
