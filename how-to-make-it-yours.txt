@@ -1,0 +1,107 @@
+Here’s exactly what to change to make it yours.
+
+  Branding
+
+  - src/components/Sidebar.astro:1 — Update name, role, and avatar path.
+  - public/assets/sam.jpg:1 — Replace with your photo (keep the same filename).
+  - src/pages/index.astro:1 — Update the hero heading, intro paragraph, and contact email.
+  - src/components/Header.astro:1 — Leave as-is; per-page titles come from each page’s <Header>.
+
+  Pages & Data
+
+  - src/pages/software-development.astro:1 — Edit the projects array (title/desc/tech).
+  - src/pages/devops.astro:1 — Edit the projects array.
+  - src/pages/personal-projects.astro:1 — Edit the projects array.
+  - src/pages/index.astro:1, src/pages/devops.astro:1, src/pages/software-development.astro:1, src/pages/personal-projects.astro:1, src/pages/blog/index.astro:1 — Update <Header
+    title="..."> strings to your name/labels.
+
+  Blog
+
+  - src/pages/blog/hi.md:1 — Keep or edit; remove the code block if you don’t want it shown.
+  - src/pages/blog/second-blog.md:1 — Example second post; copy to add more.
+    layout: ../../layouts/BlogPost.astro
+    layout: ../../layouts/BlogPost.astro
+    Your content here…
+  - src/pages/blog/index.astro:1 — Already lists posts using the same main layout styling.
+
+  Styles & Assets
+
+  - Dev: npm run dev
+  - Build: npm run build
+  - Preview: npm run preview
+
+
+  incase u wanna change things in ur sidebar 
+
+
+   Got it. Tell me the new name and URL slug you want (e.g., “Research” at /research), and I’ll do it. If you want to do it yourself, here are exact steps.
+
+  Rename “Software Development”
+
+  - Rename file
+      - Move to new slug: src/pages/software-development.astro → src/pages/your-slug.astro
+  - Update the page content
+      - src/pages/your-slug.astro:9 — change <Header title="Software Development | Kishan Chakraborty" /> to your title.
+      - src/pages/your-slug.astro:12 — change selectedItem="software-development" to your key (e.g., "research").
+      - src/pages/your-slug.astro:22 — change the <h1> to your page name.
+
+  Update Sidebar link and active state
+
+  - Change URL and label
+      - src/components/Sidebar.astro:46 — href="/software-development" → "/your-slug"
+      - src/components/Sidebar.astro:60 — “Software development” → “Your Name”
+  - Change active key
+      - src/components/Sidebar.astro:48 and 51 — replace 'software-development' with your key (e.g., 'research')
+  - Optional: change the icon
+      - src/components/Sidebar.astro:55 — replace /assets/code.svg with any other icon under public/assets.
+
+  Make pages “sample-only”
+
+  - Already done: all three non-blog pages show a single “Sample – Content coming soon.”
+  - If you prefer to hide unused links entirely, remove the whole <a> blocks:
+      - DevOps link: src/components/Sidebar.astro:62–75
+      - Personal projects link: src/components/Sidebar.astro:76–89
+
+  Where to change names in Sidebar
+
+  - Display name: src/components/Sidebar.astro:24
+  - Role: src/components/Sidebar.astro:25
+  - Link labels: src/components/Sidebar.astro:60, 74, 88, 102
+
+
+
+  how to add ur own picture aadn unnecessary files removal 
+
+
+  Here’s what you can remove and where to change your photo.
+
+  Unnecessary files (for a research-focused site)
+
+  - Pages (delete if not needed): src/pages/devops.astro, src/pages/software-development.astro, src/pages/personal-projects.astro
+  - Components (unused after removing those pages): src/components/Project.astro, src/components/BlogPostItem.astro, src/layouts/Layout.astro
+  - Assets (only used by those pages/tiles): public/assets/code.svg, public/assets/dns.svg, public/assets/database.svg, public/assets/browser.svg
+  - Dev cache (shouldn’t be in git): .astro/ (remove from git if committed)
+
+  If you delete those, also
+
+  - Remove their links from the sidebar: src/components/Sidebar.astro:46–61, 62–75, 76–89
+  - Remove the two tiles on the homepage (or replace with one “Research” tile): src/pages/index.astro: from the line with <div class="projects-section"> to its closing </div>
+
+  Replace your profile photo
+
+  - Easiest: overwrite public/assets/Kishan.png with your photo (same filename), refresh.
+  - Or point to a new filename: edit src/components/Sidebar.astro:18 and change src="/assets/Kishan.png" to your file; drop the image in public/assets.
+
+  Where to edit your details
+
+  - Name: src/components/Sidebar.astro:24
+  - Role: src/components/Sidebar.astro:25
+  - Email: src/pages/index.astro:... the mailto link (already set to c.kishan@iitg.ac.in)
+  - Page titles: src/pages/index.astro:10, src/pages/blog/index.astro:26, src/layouts/BlogPost.astro:6
+
+  Clean before pushing
+
+  - Ensure cache and deps aren’t tracked:
+      - git rm -r --cached .astro
+      - git rm -r --cached node_modules
+  - .gitignore is already updated to ignore them.

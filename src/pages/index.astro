@@ -1,0 +1,70 @@
+---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+---
+
+
+<!DOCTYPE html>
+<html
+>
+  <Header title="Kishan Chakraborty" />
+  <body>
+  
+    <div class="content">
+      <Sidebar selectedItem="home" />
+      <nav class="main">
+        <div class="container">
+          <main class="fold-content-container">
+            <div class="fold-content">
+
+              <!-- Adding Image -->
+              <img src="assets/Kishan.png" alt="Kishan Chakraborty"
+                  width="180" height="180"
+                  style="border-radius: 500%; object-fit: cover;">
+
+              <!-- Salutaion -->
+               <!-- ...existing markup... -->
+
+                  <h3 lang="hi" class="devanagari">নমস্কাৰ, नमस्ते, Hello !!</h3>
+
+                  <!-- ...existing markup... -->
+
+
+              <!-- About Section -->
+              <p>I am currently pursuing Ph.D. in application of Reinforcement Learning under the supervision of 
+              <a href="https://sites.google.com/view/arghyadiproy/home">Dr. Arghyadip Roy</a> in 
+              <a href= "https://www.iitg.ac.in/dsai/"> MFSDSAI</a>,  IIT Guwahati</a>.
+              I have completed M.Sc. in Mathematics and Computing from IIT Guwahati.
+               Previously I was with <a href= "https://deltavrobo.com/"> DeltaV Robotics </a> working in ML
+               and Mathematical Modelling. I love doing mathematics, sketching and photography. 
+               I am deeply interested in the intersection of AI and healthcare and aspire to make 
+               meaningful contributions in the future.</p>
+              
+              
+            </div>
+
+            <!-- Add Contact media links -->
+            <div class="actions-row">
+              <div class="social-links">
+                <a href="mailto:kishanchakraborty833@gmail.com" aria-label="Email">
+                  <img src="/assets/mail.svg" alt="Mail" width="28" height="28" />
+
+                <a href="https://github.com/kishan-chakraborty" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <img src="/assets/github.svg" alt="GitHub" width="28" height="28" />
+                </a> &nbsp;
+
+                <a href="https://www.linkedin.com/in/kishan833" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <img src="/assets/linkedin.svg" alt="LinkedIn" width="28" height="28" />&nbsp;
+                </a>
+                </a>
+              </div>
+            </div>
+          </main>
+       </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>

@@ -1,0 +1,32 @@
+---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+const { frontmatter } = Astro.props as any;
+const pageTitle = `${frontmatter?.title ?? "Post"} | Kishan Chakraborty`;
+---
+
+<!DOCTYPE html>
+<html>
+  <Header title={pageTitle} />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="blog" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/blog" class="back-nav-button w-inline-block">
+              <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back to Blog</div>
+            </a>
+          </div>
+          <div class="content-container">
+            <h1>{frontmatter?.title}</h1>
+            {frontmatter?.date && <p><em>{frontmatter.date}</em></p>}
+            <slot />
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
