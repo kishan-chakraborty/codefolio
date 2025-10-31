@@ -39,12 +39,14 @@ const items = Object.entries(modules)
             <h1>Blog</h1>
             <section class="items-container">
               <div class="resouce-items">
-                {items.map((post) => (
-                  <div class="single-item">
-                    <h3><a href={post.url}>{post.title}</a></h3>
-                    {post.date && <p>{post.date}</p>}
-                  </div>
-                ))}
+                <div class="single-item">
+                  <h3><a href="/blog/rl/">Reinforcement Learning Blog</a></h3>
+                  <p>Let's understand RL intuitively.</p>
+                </div>
+                <div class="single-item">
+                  <h3><a href="/blog/paper summary/">Let's Summarize</a></h3>
+                  <p>Quick bites of some interesting paper</p>
+                </div>
               </div>
             </section>
           </div>

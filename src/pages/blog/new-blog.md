@@ -1,11 +1,7 @@
 ---
-title: "new Blog Post"
+title: "Bandit Paper Collection"
 date: "2025-10-13"
 layout: ../../layouts/BlogPost.astro
 ---
-
-This is a dummy second post to confirm navigation and layout.
-
-- It should show under the Blog list.
-- Clicking it should open inside the same template.
+This is a collection of papers on Multi-armed bandits published across all top ML conferences since 2020.
 
