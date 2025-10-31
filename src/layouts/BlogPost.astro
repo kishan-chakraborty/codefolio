@@ -21,7 +21,7 @@ const pageTitle = `${frontmatter?.title ?? "Post"} | Kishan Chakraborty`;
             </a>
           </div>
           <div class="content-container">
-            <h1>{frontmatter?.title}</h1>
+            <h3>{frontmatter?.title}</h3>
             {frontmatter?.date && <p><em>{frontmatter.date}</em></p>}
             <slot />
           </div>
@@ -29,4 +29,52 @@ const pageTitle = `${frontmatter?.title ?? "Post"} | Kishan Chakraborty`;
       </nav>
     </div>
   </body>
+  <style>
+  /* --- Markdown readability fixes (scoped to BlogPost layout) --- */
+
+  /* Body text inside markdown posts */
+  .content-container {
+    color: #e8e8e8;
+  }
+
+  /* Headings */
+  .content-container h1,
+  .content-container h2,
+  .content-container h3,
+  .content-container h4,
+  .content-container h5,
+  .content-container h6 {
+    color: #ffffff;
+  }
+
+  /* Paragraphs and list items */
+  .content-container p,
+  .content-container li {
+    color: #ffffff;
+  }
+
+  /* Links */
+  .content-container a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .content-container a:hover {
+    text-decoration: underline;
+  }
+
+  /* Code and preformatted blocks */
+  .content-container pre,
+  .content-container code {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 0.2em 0.4em;
+  }
+
+  /* KaTeX (math equations) */
+  .content-container .katex,
+  .content-container .katex-display {
+    color: #F6F6F6 !important;
+  }
+  </style>
 </html>
