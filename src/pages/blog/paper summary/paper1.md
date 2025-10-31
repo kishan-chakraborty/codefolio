@@ -1,9 +1,7 @@
 ---
-title: "Understanding PPO (Proximal Policy Optimization)"
+title: "Discovering state-of-the-art reinforcement learning algorithms"
 date: "2025-10-31"
 ---
-
-# Understanding PPO
 
 **Proximal Policy Optimization (PPO)** is one of the most popular policy-gradient algorithms in reinforcement learning.
 
