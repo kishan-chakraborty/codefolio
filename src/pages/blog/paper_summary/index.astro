@@ -8,7 +8,7 @@ const posts = Object.entries(modules).map(([path, mod]) => {
   const m: any = mod as any;
   const slug = path.replace('./', '').replace(/\.(md|mdx)$/, '');
   return {
-    url: `/blog/Paper Summary/${slug}`,
+    url: `/blog/paper_summary/${slug}`,
     title: m?.frontmatter?.title ?? '',
     date: m?.frontmatter?.date,
   };
@@ -24,13 +24,13 @@ const posts = Object.entries(modules).map(([path, mod]) => {
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">
-            <a href="/blog/" class="back-nav-button w-inline-block">
+            <a href="/blog" class="back-nav-button w-inline-block">
               <img src="/assets/back.svg" alt="" class="back-nav-img" loading="lazy" />
               <div>Back</div>
             </a>
           </div>
           <div class="content-container">
-            <h1>Reinforcement Learning Blog</h1>
+            <h2>Paper Summaries</h2>
             <section class="items-container">
               <div class="resouce-items">
                 {posts.map((post) => (
