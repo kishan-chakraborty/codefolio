@@ -600,8 +600,8 @@ body.light-theme .w-nav {
 }
 
 .content-container {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   flex-direction: column;
   display: flex;
 }
@@ -722,4 +722,11 @@ body.light-theme .w-nav {
     width: 64px;
     height: 64px;
   }
-}
+
+  /* Make sure this loads after all other CSS */
+  .content-container :where(ol) {
+    margin: 0.3em 0 !important;
+    padding-left: 1.2em !important;
+    border: 1px solid red !important; /* TEMP for testing */
+  }
+    }
