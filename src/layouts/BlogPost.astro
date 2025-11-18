@@ -32,12 +32,14 @@ const parentPath = currentPath.replace(/\/[^/]+\/?$/, "/");
       </nav>
     </div>
   </body>
-  <style>
+  <style is:global>
+
   /* --- Markdown readability fixes (scoped to BlogPost layout) --- */
 
   /* Body text inside markdown posts */
   .content-container {
     color: #e8e8e8;
+    font-size: 110%;
   }
 
   /* Headings */
@@ -73,12 +75,54 @@ const parentPath = currentPath.replace(/\/[^/]+\/?$/, "/");
     border-radius: 6px;
     padding: 0.2em 0.4em;
   }
-
-  /* KaTeX (math equations) */
-  .content-container .katex,
-  .content-container .katex-display {
-    color: #F6F6F6 !important;
-  }
   </style>
+
+  <style is:global>
+  /* Override KaTeX default spacing and alignment globally */
+  .katex-display {
+  }
+
+  .katex-display > .katex {
+    font-size: 1.3em !important;
+    color: #ffffff;
+    text-align: center !important;
+    margin-top: 0.1em !important;
+    margin-bottom: 0.1em !important;
+  }
+
+  /* optional: match text line spacing more closely */
+  p + .katex-display,
+  .katex-display + p {
+    margin-top: 0.1em !important;
+    margin-bottom: 0.1em !important;
+}
+</style>
+
+<style>
+/* 🪶 Tighten list spacing inside blog posts */
+.content-container ul,
+.content-container ol {
+  margin-top: 0.4em;   /* reduce space above list */
+  margin-bottom: 0.4em; /* reduce space below list */
+  padding-left: 1.4em;  /* standard indent */
+}
+
+/* Reduce space between list items themselves */
+.content-container li {
+  margin-bottom: 0.2em !important; /* less vertical gap between bullets */
+}
+
+/* Optional: smaller gap between paragraph and list */
+.content-container p + ul,
+.content-container p + ol {
+  margin-top: 0.2em;
+}
+
+/* Optional: smaller gap between list and next paragraph */
+.content-container ul + p,
+.content-container ol + p {
+  margin-top: 0.4em;
+}
+</style>
 
 </html>
