@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.5",
-    "@astrojs/mdx": "^4.0.3"
+    "@astrojs/mdx": "^4.0.3",
+    "astro": "^5.1.5"
   },
   "devDependencies": {
     "rehype-katex": "^7.0.1",

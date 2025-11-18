@@ -31,3 +31,5 @@ coverage/
 
 # macOS-specific files
 .DS_Store
+*.gz
+.yarn/*
