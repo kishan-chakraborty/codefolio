@@ -3,7 +3,7 @@ import Header from '../../../components/Header.astro';
 import Sidebar from '../../../components/Sidebar.astro';
 
 // Import all markdown files under this directory
-const modules = import.meta.glob('./*.md', { eager: true });
+const modules = import.meta.glob('./*.{md, mdx}', { eager: true });
 const posts = Object.entries(modules).map(([path, mod]) => {
   const m: any = mod as any;
   const slug = path.replace('./', '').replace(/\.(md|mdx)$/, '');
@@ -11,8 +11,15 @@ const posts = Object.entries(modules).map(([path, mod]) => {
     url: `/blog/rl/${slug}`,
     title: m?.frontmatter?.title ?? '',
     date: m?.frontmatter?.date,
+    order: m?.frontmatter?.order ?? null,
   };
-}).sort((a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime());
+}).sort((a, b) => {
+  if (a.order != null && b.order != null) return a.order - b.order;
+  if (a.order != null) return -1;
+  if (b.order != null) return 1;
+  return new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime();
+});
+
 ---
 
 <!DOCTYPE html>
