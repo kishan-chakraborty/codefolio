@@ -1,7 +1,7 @@
 ---
-title: "Understanding Value and Policy Iteration"
+title: "Value and Policy Iteration"
 layout: ../../../layouts/BlogPost.astro
-order: 2
+order: 3
 ---
 
 In this blog (and the following ones) we will try to answer some fundamental questions common to almost all RL algorithms.
@@ -11,7 +11,7 @@ In this blog (and the following ones) we will try to answer some fundamental que
 4. How does the agent use the learnt experience to achieve it's objective?
 5. How does the agent learn new things without forgetting what already works?
 
-Value and Policy iteration are very simple algortihms used when the environemnt is fully known. 
+Value and Policy iteration are very simple algorithms used when the environment is fully known. 
 At each time step an agent know the state it is in as well as the probability of the next state
 for a particular action.<br>
 The objective of these algorithm is to find a policy $\pi$ with the largest value function for each state $s_t$.
