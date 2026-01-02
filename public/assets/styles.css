@@ -58,6 +58,7 @@ img {
 
 html {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -727,6 +728,18 @@ body.light-theme .w-nav {
   .content-container :where(ol) {
     margin: 0.3em 0 !important;
     padding-left: 1.2em !important;
-    border: 1px solid red !important; /* TEMP for testing */
   }
-    }
+
+  body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;   /* ✅ disables outer scrollbar */
+  }
+
+  .content {
+    height: 100%;
+    overflow-y: auto;   /* ✅ inner scrolling only */
+  }
+
+
+}
