@@ -1,6 +1,5 @@
 ---
 title: "Discovering state-of-the-art reinforcement learning algorithms"
-date: "2025-10-31"
 layout: ../../../layouts/BlogPost.astro
 ---
 Human and other animals use powerful RL mechanism which is learnt by billions years of <br> evolution. Machine on the other hand learn through hand-crafted learning rules. The goal <br>
