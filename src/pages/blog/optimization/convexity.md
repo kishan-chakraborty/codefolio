@@ -46,3 +46,4 @@ This means for a $\alpha$-convex function $f, f-\frac{\alpha}{2}x^2$ is still a 
 1. A strongly convex function has a unique global minima.
 2. Unlike a convex function that only stays above the tangent line, a strongly convex function also stays above a parabola.
 3. When $||x|| \rightarrow \infty$, a strongly convex function $f \rightarrow \infty$.
+4. If a strong convex function is twice differentiable, then the hessian $\nabla^2 f(x)$ is positive definite.
